@@ -3,7 +3,7 @@ import { ListBoxItem } from '.';
 
 
 const meta = {
-  title: 'Components/List Box/ListItem',
+  title: 'Components/List Box/ListBoxItem',
   component: ListBoxItem,
   tags: ['autodocs'],
   parameters: {
