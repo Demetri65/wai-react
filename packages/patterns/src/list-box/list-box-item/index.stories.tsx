@@ -3,7 +3,7 @@ import { ListBoxItem } from '.';
 
 
 const meta = {
-  title: 'Components/List Box/ListBoxItem',
+  title: 'Patterns/List Box/ListBoxItem',
   component: ListBoxItem,
   tags: ['autodocs'],
   parameters: {
@@ -18,6 +18,5 @@ export const Default: Story = {
     render: () => (
         <ListBoxItem>hello</ListBoxItem>
     )
-    
 };
 

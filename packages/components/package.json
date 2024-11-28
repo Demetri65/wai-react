@@ -1,10 +1,13 @@
 {
-  "name": "components",
+  "name": "@wai-react/components",
   "version": "0.0.1",
   "description": "small component library",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "vitest"
+    "test": "vitest",
+    "build": "tsc --project tsconfig.json && vite build --config vite.config.ts"
   },
   "devDependencies": {
     "vitest": "^2.1.1"

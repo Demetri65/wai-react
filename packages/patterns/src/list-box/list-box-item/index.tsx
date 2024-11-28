@@ -1,13 +1,14 @@
-import { forwardRef } from "react";
-import { ListItem, ListItemProps } from "../../list/list-item";
+import { forwardRef, useId } from "react";
+import { ListItem, ListItemProps } from "../../../components/list/list-item";
 
 export type ListBoxItemProps = {
     selected?: boolean;
 } & ListItemProps;
 
 export const ListBoxItem = forwardRef<HTMLLIElement, ListBoxItemProps>(({ children, selected = false, ...rest }: ListBoxItemProps, ref) => {
+    const optionId = useId();
     return (
-        <ListItem aria-selected={selected} {...rest} ref={ref}>
+        <ListItem role="option" aria-selected={selected} id={optionId} {...rest} ref={ref}>
             {children}
         </ListItem>
     )

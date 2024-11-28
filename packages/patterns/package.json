@@ -1,0 +1,20 @@
+{
+    "name": "@wai-react/patterns",
+    "version": "0.0.1",
+    "description": "small component library",
+    "main": "dist/index.js",
+    "module": "dist/index.esm.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "test": "vitest",
+        "build": "tsc --project tsconfig.json && vite build"
+    },
+    "devDependencies": {
+        "vitest": "^2.1.1"
+    },
+    "author": "demetri lopez",
+    "license": "ISC",
+    "dependencies": {
+        "@wai-react/components": "^0.0.1"
+    }
+}
