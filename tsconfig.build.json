@@ -5,7 +5,8 @@
         "dist"
     ],
     "compilerOptions": {
-        "declaration": true,"target": "ESNext",
+        "declaration": true,
+        "target": "ESNext",
         "module": "ESNext",
         "moduleResolution": "Node",
         "strict": true,
@@ -15,7 +16,7 @@
         "baseUrl": ".",
         "jsx": "react-jsx",
         "paths": {
-        "@wai-aria/*": ["./packages/*/"]
+        "@wai-react/*": ["./packages/*/"]
         }
     }
 }
