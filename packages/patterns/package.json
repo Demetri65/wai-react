@@ -7,22 +7,44 @@
     "types": "dist/index.d.ts",
     "scripts": {
         "test": "vitest",
-        "build": "vite build",
-        "check-types": "tsc --noEmit",
+        "build": "vite build && tsc --emitDeclarationOnly",
+        "lint": "eslint . --max-warnings 0",
         "compile": "rm -rf dist/* && tsc -p tsconfig.patterns.json"
     },
     "exports": {
-        "./accordion": "./dist/accordion.ts",
-        "./landmarks/complimentary": "./dist/landmarks/complimentary.ts",
-        "./landmarks/region": "./dist/landmarks/region.ts",
-        "./list-box": "./dist/list-box.ts"
-      },
+        ".": {
+            "require": "./dist/index.js",
+            "import": "./dist/index.esm.js",
+            "types": "./dist/index.d.ts"
+        },
+        "./accordion": {
+            "require": "./dist/Accordion/index.js",
+            "import": "./dist/Accordion/index.esm.js",
+            "types": "./dist/Accordion/index.d.ts"
+        },
+        "./landmarks": {
+            "types": "./dist/Landmarks/index.js",
+            "import": "./dist/Landmarks/index.esm.js",
+            "require": "./dist/Landmarks/index.d.ts"
+        },
+        "./landmarks/complimentary": {
+            "types": "./dist/Landmarks/Complimentary/index.js",
+            "import": "./dist/Landmarks/Complimentary/index.esm.js",
+            "require": "./dist/Landmarks/Complimentary/index.d.ts"
+        },
+        "./landmarks/region": {
+            "types": "./dist/Landmarks/Region/index.js",
+            "import": "./dist/Landmarks/Region/index.esm.js",
+            "require": "./dist/Landmarks/Region/index.d.ts"
+        }
+    },
     "devDependencies": {
+        "@vitejs/plugin-react": "^4.3.4",
         "vitest": "^2.1.1"
     },
     "author": "demetri lopez",
     "license": "ISC",
     "dependencies": {
-        "@wai-react/components": "^0.0.1"
+        "react": "^18.2.0"
     }
 }

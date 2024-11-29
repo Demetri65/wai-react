@@ -7,17 +7,35 @@
     "types": "dist/index.d.ts",
     "scripts": {
         "test": "vitest",
-        "build": "vite build",
-        "check-types": "tsc --noEmit",
+        "build": "vite build && tsc --emitDeclarationOnly",
         "compile": "rm -rf dist/* && tsc -p tsconfig.components.json"
     },
     "exports": {
-        "./button": "./dist/button.ts",
-        "./header": "./dist/header.ts",
-        "./heading": "./dist/heading.ts",
-        "./list": "./dist/list.ts",
-        "./select": "./dist/select.ts",
-        "./text": "./dist/text.ts"
+       ".": {
+            "require": "./dist/index.js",
+            "import": "./dist/index.esm.js",
+            "types": "./dist/index.d.ts"
+        },
+        "./heading": {
+            "require": "./dist/Heading/index.js",
+            "import": "./dist/Heading/index.esm.js",
+            "types": "./dist/Heading/index.d.ts"
+        },
+        "./list": {
+            "types": "./dist/List/index.js",
+            "import": "./dist/List/index.esm.js",
+            "require": "./dist/List/index.d.ts"
+        },
+        "./select": {
+            "types": "./dist/Select/index.js",
+            "import": "./dist/Select/index.esm.js",
+            "require": "./dist/Select/index.d.ts"
+        },
+        "./text": {
+            "types": "./dist/Text/index.js",
+            "import": "./dist/Text/index.esm.js",
+            "require": "./dist/Text/index.d.ts"
+        }
       },
     "devDependencies": {
         "vitest": "^2.1.1"

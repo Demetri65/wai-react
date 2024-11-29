@@ -6,14 +6,27 @@
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
   "scripts": {
-      "test": "vitest",
-      "build": "vite build",
-      "check-types": "tsc --noEmit",
-      "compile": "rm -rf dist/* && tsc -p tsconfig.hooks.json"
-  },
-  "exports": {
-      "./use-accordion": "./dist/index.ts",
-      "./use-list-box": "./dist/index.ts"
+        "test": "vitest",
+        "build": "vite build",
+        "lint": "eslint . --max-warnings 0",
+        "compile": "rm -rf dist/* && tsc -p tsconfig.patterns.json"
+    },
+      "exports": {
+      "./accordion": {
+        "require": "./dist/use-accordion/index.js",
+        "import": "./dist/use-accordion/index.esm.js",
+        "types": "./dist/use-accordion/index.d.ts"
+      },
+      "./landmarks/complimentary": {
+        "types": "./src/landmarks/complimentary.ts",
+        "import": "./dist/landmarks/complimentary.ts",
+        "require": "./dist/landmarks/complimentary.ts"
+      },
+      "./landmarks/region": {
+        "types": "./src/landmarks/region.ts",
+        "import": "./dist/landmarks/region.ts",
+        "require": "./dist/landmarks/region.ts"
+      }
     },
   "devDependencies": {
       "vitest": "^2.1.1"

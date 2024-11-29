@@ -16,8 +16,6 @@
   },
   "scripts": {
     "build": "tsc && vite build",
-    "dev": "turbo run dev",
-    "lint": "turbo run lint",
     "compile": "npm run compile -ws",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
@@ -50,7 +48,6 @@
     "globals": "^15.9.0",
     "storybook": "^8.3.3",
     "ts-node": "^10.9.1",
-    "turbo": "^2.3.3",
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.0.1"
   },

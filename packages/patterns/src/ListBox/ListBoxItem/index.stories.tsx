@@ -1,24 +1,22 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Text } from './Text';
+import { ListBoxItem } from './ListBoxItem';
+
 
 const meta = {
-  title: 'Components/Text',
-  component: Text,
+  title: 'Patterns/List Box/ListBoxItem',
+  component: ListBoxItem,
   tags: ['autodocs'],
   parameters: {
     layout: 'center',
   },
-} satisfies Meta<typeof Text>;
+} satisfies Meta<typeof ListBoxItem>;
 
 export default meta;
-
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
     render: () => (
-        <Text>
-            hello
-        </Text>
+        <ListBoxItem>hello</ListBoxItem>
     )
-    
 };
+
