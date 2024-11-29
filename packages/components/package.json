@@ -1,46 +1,49 @@
 {
-    "name": "@wai-react/components",
-    "version": "0.0.1",
-    "description": "small component library",
-    "main": "dist/index.js",
-    "module": "dist/index.esm.js",
-    "types": "dist/index.d.ts",
-    "scripts": {
-        "test": "vitest",
-        "build": "vite build && tsc --emitDeclarationOnly",
-        "compile": "rm -rf dist/* && tsc -p tsconfig.components.json"
+  "name": "@wai-react/components",
+  "version": "0.0.1",
+  "sideEffects": false,
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "types": "./src/index.tsx",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
     },
-    "exports": {
-       ".": {
-            "require": "./dist/index.js",
-            "import": "./dist/index.esm.js",
-            "types": "./dist/index.d.ts"
-        },
-        "./heading": {
-            "require": "./dist/Heading/index.js",
-            "import": "./dist/Heading/index.esm.js",
-            "types": "./dist/Heading/index.d.ts"
-        },
-        "./list": {
-            "types": "./dist/List/index.js",
-            "import": "./dist/List/index.esm.js",
-            "require": "./dist/List/index.d.ts"
-        },
-        "./select": {
-            "types": "./dist/Select/index.js",
-            "import": "./dist/Select/index.esm.js",
-            "require": "./dist/Select/index.d.ts"
-        },
-        "./text": {
-            "types": "./dist/Text/index.js",
-            "import": "./dist/Text/index.esm.js",
-            "require": "./dist/Text/index.d.ts"
-        }
-      },
-    "devDependencies": {
-        "vitest": "^2.1.1"
+    "./heading": {
+      "types": "./src/heading/heading.tsx",
+      "import": "./dist/heading/heading.mjs",
+      "require": "./dist/heading/heading.js"
     },
-    "author": "demetri lopez",
-    "license": "ISC",
-    "dependencies": {}
+    "./list": {
+      "types": "./src/list/list.tsx",
+      "import": "./dist/list/list.mjs",
+      "require": "./dist/list/list.js"
+    },
+    "./text": {
+      "types": "./src/text/text.tsx",
+      "import": "./dist/text/text.mjs",
+      "require": "./dist/text/text.js"
+    }
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "lint": "eslint . --max-warnings 0",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
+  },
+  "devDependencies": {
+    "@wai-react/eslint-config": "workspace:*",
+    "@types/react": "^18.2.61",
+    "@types/react-dom": "^18.2.19",
+    "eslint": "^8.57.0",
+    "@wai-react/typescript-config": "workspace:*",
+    "tsup": "^8.0.2",
+    "typescript": "5.5.4"
+  },
+  "dependencies": {
+    "react": "^18.2.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
 }

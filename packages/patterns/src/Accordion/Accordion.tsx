@@ -9,3 +9,6 @@ export const Accordion = forwardRef<HTMLDivElement, AccordionProps>(({children, 
         </div>
     )
 })
+
+export * from "./accordion-header/accordion-header";
+export * from "./accordion-panel/accordion-panel";

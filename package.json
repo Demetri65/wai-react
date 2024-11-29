@@ -1,61 +1,21 @@
 {
-  "name": "@wai-react/root",
   "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
-  "version": "0.0.1",
-  "type": "module",
-  "main": "./dist/wai-react.umd.cjs",
-  "module": "./dist/wai-react.js",
-  "exports": {
-    ".": {
-      "import": "./dist/wai-react.js",
-      "require": "./dist/wai-react.umd.cjs"
-    }
-  },
   "scripts": {
-    "build": "vite build && npx tsc --emitDeclarationOnly",
-    "compile": "npm run compile -ws",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "publish:workspaces": "npm run build && npm run publish --workspaces"
-  },
-  "dependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "clean": "turbo run clean && rm -rf node_modules",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "turbo run build --filter=docs^... && changeset publish"
   },
   "devDependencies": {
-    "@chromatic-com/storybook": "^1.9.0",
-    "@eslint/js": "^9.9.0",
-    "@storybook/addon-essentials": "^8.3.3",
-    "@storybook/addon-interactions": "^8.3.3",
-    "@storybook/addon-links": "^8.3.3",
-    "@storybook/addon-onboarding": "^8.3.3",
-    "@storybook/blocks": "^8.3.3",
-    "@storybook/react": "^8.3.3",
-    "@storybook/react-vite": "^8.3.3",
-    "@storybook/test": "^8.3.3",
-    "@tsconfig/recommended": "^1.0.2",
-    "@types/node": "^20.6.0",
-    "@types/react": "^18.3.3",
-    "@types/react-dom": "^18.3.0",
-    "@vitejs/plugin-react": "^4.3.1",
-    "eslint": "^9.9.0",
-    "eslint-plugin-react-hooks": "^5.1.0-rc.0",
-    "eslint-plugin-react-refresh": "^0.4.9",
-    "eslint-plugin-storybook": "^0.9.0",
-    "globals": "^15.9.0",
-    "storybook": "^8.3.3",
-    "ts-node": "^10.9.1",
-    "typescript": "^5.7.2",
-    "typescript-eslint": "^8.0.1",
-    "vite-tsconfig-paths": "^5.1.3"
+    "@changesets/cli": "^2.27.1",
+    "@types/react": "^18.3.12",
+    "prettier": "^3.2.5",
+    "turbo": "^2.3.3"
   },
-  "packageManager": "npm@10.0.0",
-  "eslintConfig": {
-    "extends": [
-      "plugin:storybook/recommended"
-    ]
-  }
+  "packageManager": "pnpm@8.15.6",
+  "name": "design-system"
 }

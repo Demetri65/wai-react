@@ -11,4 +11,4 @@ export const List = forwardRef<HTMLUListElement, ListProps>(({children, ...rest}
     )
 });
 
-export * from './ListItem/ListItem';
+export * from './list-item/list-item';

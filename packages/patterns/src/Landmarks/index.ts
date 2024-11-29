@@ -1,2 +1,2 @@
-export * from "./Complimentary";
-export * from "./Region"
+export * from "./complimentary/complimentary";
+export * from "./region/region";

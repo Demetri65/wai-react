@@ -1,50 +1,60 @@
 {
-    "name": "@wai-react/patterns",
-    "version": "0.0.1",
-    "description": "small component library",
-    "main": "dist/index.js",
-    "module": "dist/index.esm.js",
-    "types": "dist/index.d.ts",
-    "scripts": {
-        "test": "vitest",
-        "build": "vite build && tsc --emitDeclarationOnly",
-        "lint": "eslint . --max-warnings 0",
-        "compile": "rm -rf dist/* && tsc -p tsconfig.patterns.json"
+  "name": "@wai-react/patterns",
+  "version": "0.0.1",
+  "sideEffects": false,
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "types": "./src/index.tsx",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
     },
-    "exports": {
-        ".": {
-            "require": "./dist/index.js",
-            "import": "./dist/index.esm.js",
-            "types": "./dist/index.d.ts"
-        },
-        "./accordion": {
-            "require": "./dist/Accordion/index.js",
-            "import": "./dist/Accordion/index.esm.js",
-            "types": "./dist/Accordion/index.d.ts"
-        },
-        "./landmarks": {
-            "types": "./dist/Landmarks/index.js",
-            "import": "./dist/Landmarks/index.esm.js",
-            "require": "./dist/Landmarks/index.d.ts"
-        },
-        "./landmarks/complimentary": {
-            "types": "./dist/Landmarks/Complimentary/index.js",
-            "import": "./dist/Landmarks/Complimentary/index.esm.js",
-            "require": "./dist/Landmarks/Complimentary/index.d.ts"
-        },
-        "./landmarks/region": {
-            "types": "./dist/Landmarks/Region/index.js",
-            "import": "./dist/Landmarks/Region/index.esm.js",
-            "require": "./dist/Landmarks/Region/index.d.ts"
-        }
+    "./accordion": {
+      "types": "./src/accordion/accordion.tsx",
+      "import": "./dist/accordion/accordion.mjs",
+      "require": "./dist/accordion/accordion.js"
     },
-    "devDependencies": {
-        "@vitejs/plugin-react": "^4.3.4",
-        "vitest": "^2.1.1"
+    "./landmarks": {
+      "types": "./src/landmarks/index.tsx",
+      "import": "./dist/landmarks/index.mjs",
+      "require": "./dist/landmarks/index.js"
     },
-    "author": "demetri lopez",
-    "license": "ISC",
-    "dependencies": {
-        "react": "^18.2.0"
+    "./landmarks/complimentary": {
+      "types": "./src/landmarks/complimentary/complimentary.tsx",
+      "import": "./dist/landmarks/complimentary/complimentary.mjs",
+      "require": "./dist/landmarks/complimentary/complimentary.js"
+    },
+    "./landmarks/region": {
+      "types": "./src/landmarks/region/region.tsx",
+      "import": "./dist/landmarks/region/region.mjs",
+      "require": "./dist/landmarks/region/region.js"
+    },
+    "./list-box": {
+      "types": "./src/list-box/list-box.tsx",
+      "import": "./dist/list-box/list-box.mjs",
+      "require": "./dist/list-box/list-box.js"
     }
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "lint": "eslint . --max-warnings 0",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
+  },
+  "devDependencies": {
+    "@wai-react/eslint-config": "workspace:*",
+    "@types/react": "^18.2.61",
+    "@types/react-dom": "^18.2.19",
+    "eslint": "^8.57.0",
+    "@wai-react/typescript-config": "workspace:*",
+    "tsup": "^8.0.2",
+    "typescript": "5.5.4"
+  },
+  "dependencies": {
+    "@wai-react/components": "workspace:*",
+    "react": "^18.2.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
 }
