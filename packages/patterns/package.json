@@ -7,8 +7,16 @@
     "types": "dist/index.d.ts",
     "scripts": {
         "test": "vitest",
-        "build": "tsc --project tsconfig.json && vite build"
+        "build": "vite build",
+        "check-types": "tsc --noEmit",
+        "compile": "rm -rf dist/* && tsc -p tsconfig.patterns.json"
     },
+    "exports": {
+        "./accordion": "./dist/accordion.ts",
+        "./landmarks/complimentary": "./dist/landmarks/complimentary.ts",
+        "./landmarks/region": "./dist/landmarks/region.ts",
+        "./list-box": "./dist/list-box.ts"
+      },
     "devDependencies": {
         "vitest": "^2.1.1"
     },

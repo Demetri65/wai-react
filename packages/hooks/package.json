@@ -6,11 +6,21 @@
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "test": "vitest"
+      "test": "vitest",
+      "build": "vite build",
+      "check-types": "tsc --noEmit",
+      "compile": "rm -rf dist/* && tsc -p tsconfig.hooks.json"
   },
+  "exports": {
+      "./use-accordion": "./dist/index.ts",
+      "./use-list-box": "./dist/index.ts"
+    },
   "devDependencies": {
-    "vitest": "^2.1.1"
+      "vitest": "^2.1.1"
   },
   "author": "demetri lopez",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+      "@wai-react/components": "^0.0.1"
+  }
 }

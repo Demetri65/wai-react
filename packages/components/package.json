@@ -1,17 +1,28 @@
 {
-  "name": "@wai-react/components",
-  "version": "0.0.1",
-  "description": "small component library",
-  "main": "dist/index.js",
-  "module": "dist/index.esm.js",
-  "types": "dist/index.d.ts",
-  "scripts": {
-    "test": "vitest",
-    "build": "tsc --project tsconfig.json && vite build --config vite.config.ts"
-  },
-  "devDependencies": {
-    "vitest": "^2.1.1"
-  },
-  "author": "demetri lopez",
-  "license": "ISC"
+    "name": "@wai-react/components",
+    "version": "0.0.1",
+    "description": "small component library",
+    "main": "dist/index.js",
+    "module": "dist/index.esm.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "test": "vitest",
+        "build": "vite build",
+        "check-types": "tsc --noEmit",
+        "compile": "rm -rf dist/* && tsc -p tsconfig.components.json"
+    },
+    "exports": {
+        "./button": "./dist/button.ts",
+        "./header": "./dist/header.ts",
+        "./heading": "./dist/heading.ts",
+        "./list": "./dist/list.ts",
+        "./select": "./dist/select.ts",
+        "./text": "./dist/text.ts"
+      },
+    "devDependencies": {
+        "vitest": "^2.1.1"
+    },
+    "author": "demetri lopez",
+    "license": "ISC",
+    "dependencies": {}
 }

@@ -1,0 +1,21 @@
+{
+    "exclude": [
+        "**/*.test.ts",
+        "node_modules",
+        "dist"
+    ],
+    "compilerOptions": {
+        "declaration": true,"target": "ESNext",
+        "module": "ESNext",
+        "moduleResolution": "Node",
+        "strict": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "baseUrl": ".",
+        "jsx": "react-jsx",
+        "paths": {
+        "@wai-aria/*": ["./packages/*/"]
+        }
+    }
+}
