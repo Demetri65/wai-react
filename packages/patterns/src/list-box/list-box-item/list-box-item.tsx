@@ -1,5 +1,5 @@
 import { forwardRef, useId } from "react";
-import { ListItem, ListItemProps } from "../../../../components/src/list/temp";
+import { ListItem, ListItemProps } from "@wai-react/components/list";
 
 export type ListBoxItemProps = {
     selected?: boolean;

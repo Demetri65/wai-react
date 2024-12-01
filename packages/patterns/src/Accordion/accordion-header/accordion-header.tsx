@@ -1,5 +1,5 @@
 import { forwardRef, HTMLAttributes } from "react"
-import { Heading } from "../../../../components/src/heading/temp";
+import { Heading } from "@wai-react/components/heading";
 
 export type AccordionHeaderProps = {
     /**
