@@ -15,7 +15,7 @@
       "require": "./dist/accordion/index.js"
     },
     "./landmarks": {
-      "types": "./src/landmarks/index.tsx",
+      "types": "./src/landmarks/index.ts",
       "import": "./dist/landmarks/index.mjs",
       "require": "./dist/landmarks/index.js"
     },
