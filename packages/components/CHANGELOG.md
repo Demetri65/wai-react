@@ -1,5 +1,11 @@
 # @wai-react/components
 
+## 0.0.3
+
+### Patch Changes
+
+- 3179594: Another test patch
+
 ## 0.0.2
 
 ### Patch Changes
