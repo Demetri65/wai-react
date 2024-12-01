@@ -1,3 +1,3 @@
 export * from "./accordion";
-export * from "./AccordionHeader/AccordionHeader";
-export * from "./AccordionPanel/AccordionPanel";
+export * from "./accordion-header/accordion-header";
+export * from "./accordion-panel/accordion-panel";
