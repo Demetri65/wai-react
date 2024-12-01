@@ -6,4 +6,4 @@ export const Text = ({children, ...rest}: TextProps) => {
     return (
         <span {...rest}>{children}</span>
     )
-}
+};
