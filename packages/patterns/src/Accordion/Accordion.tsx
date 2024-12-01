@@ -8,7 +8,7 @@ export const Accordion = forwardRef<HTMLDivElement, AccordionProps>(({children, 
             {children}
         </div>
     )
-})
+});
 
 export * from "./accordion-header/accordion-header";
 export * from "./accordion-panel/accordion-panel";
