@@ -10,9 +10,9 @@
       "require": "./dist/index.js"
     },
     "./accordion": {
-      "types": "./src/accordion/accordion.tsx",
-      "import": "./dist/accordion/accordion.mjs",
-      "require": "./dist/accordion/accordion.js"
+      "types": "./src/accordion/index.tsx",
+      "import": "./dist/accordion/index.mjs",
+      "require": "./dist/accordion/index.js"
     },
     "./landmarks": {
       "types": "./src/landmarks/index.tsx",
@@ -20,19 +20,19 @@
       "require": "./dist/landmarks/index.js"
     },
     "./landmarks/complimentary": {
-      "types": "./src/landmarks/complimentary/complimentary.tsx",
-      "import": "./dist/landmarks/complimentary/complimentary.mjs",
-      "require": "./dist/landmarks/complimentary/complimentary.js"
+      "types": "./src/landmarks/complimentary/index.tsx",
+      "import": "./dist/landmarks/complimentary/index.mjs",
+      "require": "./dist/landmarks/complimentary/index.js"
     },
     "./landmarks/region": {
-      "types": "./src/landmarks/region/region.tsx",
-      "import": "./dist/landmarks/region/region.mjs",
-      "require": "./dist/landmarks/region/region.js"
+      "types": "./src/landmarks/region/index.tsx",
+      "import": "./dist/landmarks/region/index.mjs",
+      "require": "./dist/landmarks/region/index.js"
     },
     "./list-box": {
-      "types": "./src/list-box/list-box.tsx",
-      "import": "./dist/list-box/list-box.mjs",
-      "require": "./dist/list-box/list-box.js"
+      "types": "./src/list-box/index.tsx",
+      "import": "./dist/list-box/index.mjs",
+      "require": "./dist/list-box/index.js"
     }
   },
   "scripts": {

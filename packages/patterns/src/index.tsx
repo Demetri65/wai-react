@@ -1,2 +1,2 @@
-export * from "./accordion/accordion";
+export * from "./accordion";
 export * from "./landmarks"

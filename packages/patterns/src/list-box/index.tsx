@@ -13,5 +13,5 @@ export const ListBox = forwardRef<HTMLDivElement, ListBoxProps>(({ children, ...
     )
 });
 
-export * from "./list-box-group/list-box-group";
-export * from "./list-box-item/list-box-item";
+export * from "./list-box-group";
+export * from "./list-box-item";

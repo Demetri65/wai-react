@@ -10,19 +10,19 @@
       "require": "./dist/index.js"
     },
     "./heading": {
-      "types": "./src/heading/heading.tsx",
-      "import": "./dist/heading/heading.mjs",
-      "require": "./dist/heading/heading.js"
+      "types": "./src/heading/index.tsx",
+      "import": "./dist/heading/index.mjs",
+      "require": "./dist/heading/index.js"
     },
     "./list": {
-      "types": "./src/list/list.tsx",
-      "import": "./dist/list/list.mjs",
-      "require": "./dist/list/list.js"
+      "types": "./src/list/index.tsx",
+      "import": "./dist/list/index.mjs",
+      "require": "./dist/list/index.js"
     },
     "./text": {
-      "types": "./src/text/text.tsx",
-      "import": "./dist/text/text.mjs",
-      "require": "./dist/text/text.js"
+      "types": "./src/text/index.tsx",
+      "import": "./dist/text/index.mjs",
+      "require": "./dist/text/index.js"
     }
   },
   "scripts": {
