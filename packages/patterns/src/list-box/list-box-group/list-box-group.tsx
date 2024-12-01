@@ -1,5 +1,5 @@
 
-import { ListProps, List, ListItem } from "@wai-react/components/list";
+import { ListProps, List, ListItem } from "../../../../components/src/list/temp";
 import { forwardRef } from "react";
 
 

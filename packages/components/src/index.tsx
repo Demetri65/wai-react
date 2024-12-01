@@ -1,3 +1,3 @@
-export * from "./heading/heading";
-export * from "./list/list";
+export * from "./heading/temp";
+export * from "./list/temp";
 export * from "./text/text";
