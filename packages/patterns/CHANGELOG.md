@@ -1,5 +1,14 @@
 # @wai-react/patterns
 
+## 0.0.4
+
+### Patch Changes
+
+- just updating
+- Updated dependencies
+  - @wai-react/typescript-config@0.0.1
+  - @wai-react/components@0.0.3
+
 ## 0.0.3
 
 ### Patch Changes
