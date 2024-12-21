@@ -46,12 +46,12 @@
     "@types/react": "^18.2.61",
     "@types/react-dom": "^18.2.19",
     "eslint": "^8.57.0",
-    "@wai-react/typescript-config": "workspace:*",
     "tsup": "^8.0.2",
     "typescript": "5.5.4"
   },
   "dependencies": {
     "@wai-react/components": "workspace:*",
+    "@wai-react/typescript-config": "workspace:*",
     "react": "^18.2.0"
   },
   "publishConfig": {

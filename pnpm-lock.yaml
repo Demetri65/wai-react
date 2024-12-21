@@ -127,6 +127,9 @@ importers:
       '@wai-react/components':
         specifier: workspace:*
         version: link:../components
+      '@wai-react/typescript-config':
+        specifier: workspace:*
+        version: link:../typescript-config
       react:
         specifier: ^18.2.0
         version: 18.3.1
@@ -140,9 +143,6 @@ importers:
       '@wai-react/eslint-config':
         specifier: workspace:*
         version: link:../eslint-config
-      '@wai-react/typescript-config':
-        specifier: workspace:*
-        version: link:../typescript-config
       eslint:
         specifier: ^8.57.0
         version: 8.57.1
