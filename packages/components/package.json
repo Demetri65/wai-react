@@ -29,7 +29,8 @@
     "build": "tsup",
     "dev": "tsup --watch",
     "lint": "eslint . --max-warnings 0",
-    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
+    "test": "jest"
   },
   "devDependencies": {
     "@wai-react/eslint-config": "workspace:*",

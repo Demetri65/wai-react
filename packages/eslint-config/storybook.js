@@ -21,6 +21,7 @@ module.exports = {
       "@vercel/style-guide/eslint/browser",
       "@vercel/style-guide/eslint/react",
     ].map(require.resolve),
+    "eslint-config-prettier",
   ],
   parserOptions: {
     project,

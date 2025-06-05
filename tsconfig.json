@@ -1,0 +1,9 @@
+{
+  "extends": "./packages/typescript-config/base.json",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "outDir": "dist"
+  },
+  "include": ["packages/**/*", "jest.setup.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
+}

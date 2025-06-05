@@ -2,11 +2,31 @@
 
 ## Using this example
 
-Run the following command:
+Clone the repository and install dependencies:
 
 ```sh
-npx create-turbo@latest -e design-system
+pnpm install
 ```
+
+### Development
+
+Run Storybook and watch for changes:
+
+```sh
+pnpm dev
+```
+
+Run the test suite:
+
+```sh
+pnpm test
+```
+
+Environment variables used for publishing packages can be configured in `.env` based on `.env.example`.
+
+### Continuous Integration
+
+The repository includes a GitHub Actions workflow that runs linting and tests on every pull request.
 
 ### Useful Commands
 
@@ -58,3 +78,7 @@ When you push your code to GitHub, the [GitHub Action](https://github.com/change
 ```bash
 turbo run build --filter=docs^... && changeset publish
 ```
+
+## License
+
+This project is released under the MIT License.
