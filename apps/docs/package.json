@@ -17,17 +17,20 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@wai-react/eslint-config": "workspace:*",
     "@storybook/addon-actions": "^8.2.6",
     "@storybook/addon-essentials": "^8.2.6",
     "@storybook/addon-links": "^8.2.6",
     "@storybook/react": "^8.2.6",
     "@storybook/react-vite": "^8.2.6",
     "@vitejs/plugin-react": "^4.2.1",
+    "@wai-react/eslint-config": "workspace:*",
+    "@wai-react/typescript-config": "workspace:*",
+    "autoprefixer": "^10.4.24",
     "eslint": "^8.57.0",
+    "postcss": "^8.4.49",
     "serve": "^14.2.1",
     "storybook": "^8.2.6",
-    "@wai-react/typescript-config": "workspace:*",
+    "tailwindcss": "^3.4.19",
     "typescript": "5.5.4",
     "vite": "^5.1.4"
   }
