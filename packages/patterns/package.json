@@ -1,6 +1,7 @@
 {
   "name": "@wai-react/patterns",
   "version": "0.0.4",
+  "description": "Composable React implementations of common WAI-ARIA interaction patterns.",
   "sideEffects": false,
   "license": "MIT",
   "exports": {
