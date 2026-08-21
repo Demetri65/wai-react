@@ -1,6 +1,7 @@
 {
   "name": "@wai-react/components",
   "version": "0.0.3",
+  "description": "Semantic React primitives for building accessible interfaces.",
   "sideEffects": false,
   "license": "MIT",
   "exports": {
