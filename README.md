@@ -12,9 +12,9 @@ A TypeScript monorepo for semantic React primitives and composable interaction p
 ## Design principles
 
 - Keep primitive elements and their base semantics in `@wai-react/components`.
-- Compose multi-element interactions and ARIA relationships in `@wai-react/patterns`.
+- Keep WAI-ARIA-informed pattern composition in `@wai-react/patterns`.
 - Expose named, typed React APIs through explicit package subpaths.
-- Preserve semantic HTML and ARIA relationships while allowing consumers to pass standard DOM props.
+- Design around semantic HTML and explicit ARIA props while allowing consumers to pass standard DOM props.
 - Document the public surface with rendered Storybook examples.
 
 ## Run Storybook locally
@@ -35,29 +35,16 @@ Import components and patterns from their public subpaths:
 ```tsx
 import { Heading } from "@wai-react/components/heading";
 import { List, ListItem } from "@wai-react/components/list";
-import {
-  Accordion,
-  AccordionHeader,
-  AccordionPanel,
-} from "@wai-react/patterns/accordion";
 
 export function Example() {
   return (
-    <>
+    <section>
       <Heading rank="h2">Account settings</Heading>
       <List>
         <ListItem>Profile</ListItem>
         <ListItem>Notifications</ListItem>
       </List>
-      <Accordion>
-        <AccordionHeader control="profile-panel" expanded>
-          Profile options
-        </AccordionHeader>
-        <AccordionPanel control="profile-panel" expanded>
-          Update your profile details.
-        </AccordionPanel>
-      </Accordion>
-    </>
+    </section>
   );
 }
 ```
@@ -97,4 +84,4 @@ Package publishing is handled separately through the repository release workflow
 
 ## Accessibility status
 
-The components preserve semantic HTML and ARIA relationships, but this project does not claim complete WAI-ARIA or WCAG compliance. Storybook examples document the implemented behavior; they are not a substitute for testing with assistive technologies. Consumers remain responsible for validating complete application flows in their own content, styling, and interaction contexts.
+The library is designed around semantic HTML and explicit ARIA props, but this project does not claim complete WAI-ARIA or WCAG compliance. Storybook examples document the implemented behavior; they are not a substitute for testing with assistive technologies. Consumers remain responsible for validating complete application flows in their own content, styling, and interaction contexts.
